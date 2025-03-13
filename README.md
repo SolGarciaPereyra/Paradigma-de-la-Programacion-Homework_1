@@ -1,1 +1,0 @@
-# Paradigma-de-la-Programacion-Homework_1
