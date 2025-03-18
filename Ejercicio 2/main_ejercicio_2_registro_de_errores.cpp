@@ -23,6 +23,17 @@ int main(){
     string quinta_leyenda_mensaje = "No se pudo asignar la memoria requerida";
     logMensaje(quinta_leyenda_mensaje, quinta_leyenda);
 
+    //Verifico el funcionameinto de mi funcion logMensaje para el inciso bii:
+    //Tanto el mensaje de error, el nombre del archivo y la linea de codigo fueron elegidos de manera arbitraria.
+    string mensaje_de_error = "segfault";
+    string archivo = "guia_de_ejercicios.cpp";
+    int linea_de_codigo = 7;
+    logMensaje(mensaje_de_error, archivo, linea_de_codigo);
+
+    //Verifico el funcionameinto de mi funcion logMensaje para el inciso bii:
+    string mensaje_de_acceso = "CORRECTO";
+    string nombre_de_usuario = "sgarciapereyra";
+    logMensaje(mensaje_de_acceso, nombre_de_usuario);
 
     return 0;
 }

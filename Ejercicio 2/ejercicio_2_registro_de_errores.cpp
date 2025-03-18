@@ -10,8 +10,8 @@ void logMensaje(string mensaje, int NivelSeveridad){
         //Repito break en cada case para que, una vez macheado con alguna de las leyendas, no siga intentado con las demas. 
         switch(NivelSeveridad){   
             case DEBUG:
-                archivo << "[DEBUG] < " << mensaje << " >\n";
-                archivo.close();
+                archivo << "[DEBUG] < " << mensaje << " >\n";  //Aca estoy escribiendo en mi archivo
+                archivo.close();  //Una vez que termine de escribir, cierro mi archivo
                 break; 
             case INFO:
                 archivo << "[INFO] < " << mensaje << " >\n";
@@ -30,6 +30,32 @@ void logMensaje(string mensaje, int NivelSeveridad){
                 archivo.close();
                 break;
         }
+    }
+    else{
+        cout << "Hubo un error al intentar abrir el archivo." << endl;
+    }  
+}
+
+void logMensaje(string Mensaje_de_Error, string Archivo, int Linea_de_Codigo){
+    //Creo y/o abro mi archivo de texto en el que llego registro de los eventos. Uso ios::app para no sobreescribir mi archivo.
+    ofstream archivo_txt("sistema_log.txt", ios::app);   
+
+    if(archivo_txt.is_open()){  //Verifico que se abrio bien el archivo
+        archivo_txt << "[ERROR] " << Archivo << ": linea de codigo " << Linea_de_Codigo << ", < " << Mensaje_de_Error << " >\n";
+        archivo_txt.close(); 
+    }
+    else{
+        cout << "Hubo un error al intentar abrir el archivo." << endl;
+    }  
+}
+
+void logMensaje(string Mensaje_de_Acceso, string Nombre_de_Usuario){
+    //Creo y/o abro mi archivo de texto en el que llego registro de los eventos. Uso ios::app para no sobreescribir mi archivo.
+    ofstream archivo_txt("sistema_log.txt", ios::app);   
+
+    if(archivo_txt.is_open()){  //Verifico que se abrio bien el archivo
+        archivo_txt << "[SECURITY] Acceso de usuario: " << Nombre_de_Usuario << " -> " << Mensaje_de_Acceso << "\n";
+        archivo_txt.close(); 
     }
     else{
         cout << "Hubo un error al intentar abrir el archivo." << endl;

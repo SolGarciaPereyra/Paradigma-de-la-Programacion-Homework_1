@@ -13,3 +13,16 @@ enum NivelSeveridad {DEBUG = 1, INFO, WARNING, ERROR, CRITICAL};
     un poco acerca del evento. Es util para llevar registro de todos los eventos relevantes ocurridos.
 */
 void logMensaje(string mensaje, int NivelSeveridad);
+
+//Para el inciso bii y biii, realizo una sobrecarga de la funcion logMensaje.
+
+/*
+    Funcion que posibilita el registro de errores al sistema log, indicando el mensaje de error, el archivo
+    y la linea de codigo donde sucedio el error. 
+*/
+void logMensaje(string Mensaje_de_Error, string Archivo, int Linea_de_Codigo);
+
+/*
+    Funcion que posibilita el registro de accesos de usuarios a la aplicacion.
+*/
+void logMensaje(string Mensaje_de_Acceso, string Nombre_de_Usuario);
