@@ -1,0 +1,8 @@
+[DEBUG] < Error: valor negativo detectado >
+[INFO] < El programa inicio correctamente >
+[WARNING] < La memoria esta apunto de llenarse >
+[ERROR] < No se pudo abrir exitosamente el archivo >
+[CRITICAL] < No se pudo asignar la memoria requerida >
+[ERROR] guia_de_ejercicios.cpp: linea de codigo 7, < segfault >
+[SECURITY] Acceso de usuario: sgarciapereyra -> CORRECTO
+[RUNTIME_ERROR] < Hubo un problema durante la ejecucion >

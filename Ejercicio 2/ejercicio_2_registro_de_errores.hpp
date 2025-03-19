@@ -14,7 +14,7 @@ enum NivelSeveridad {DEBUG = 1, INFO, WARNING, ERROR, CRITICAL};
 */
 void logMensaje(string mensaje, int NivelSeveridad);
 
-//Para el inciso bii y biii, realizo una sobrecarga de la funcion logMensaje.
+//Para el inciso bii, biii y biv, realizo una sobrecarga de la funcion logMensaje.
 
 /*
     Funcion que posibilita el registro de errores al sistema log, indicando el mensaje de error, el archivo
@@ -26,3 +26,11 @@ void logMensaje(string Mensaje_de_Error, string Archivo, int Linea_de_Codigo);
     Funcion que posibilita el registro de accesos de usuarios a la aplicacion.
 */
 void logMensaje(string Mensaje_de_Acceso, string Nombre_de_Usuario);
+
+/*
+    Funcion que posibilita el registro de errores en tiempo de ejecucion, detener la ejecucion del 
+    programa y salir del mismo con un codigo de error. 
+    Le agrego el parametro de entrada Es_Runtime_Error porque, o si no, no me deja realizar la 
+    sobrecarga de funcion, ya que no se termina de diferenciar de las demas. 
+*/
+int logMensaje(string Mensaje_de_Error, bool Es_Runtime_Error);

@@ -51,13 +51,32 @@ void logMensaje(string Mensaje_de_Error, string Archivo, int Linea_de_Codigo){
 
 void logMensaje(string Mensaje_de_Acceso, string Nombre_de_Usuario){
     //Creo y/o abro mi archivo de texto en el que llego registro de los eventos. Uso ios::app para no sobreescribir mi archivo.
-    ofstream archivo_txt("sistema_log.txt", ios::app);   
+    ofstream archivo("sistema_log.txt", ios::app);   
 
-    if(archivo_txt.is_open()){  //Verifico que se abrio bien el archivo
-        archivo_txt << "[SECURITY] Acceso de usuario: " << Nombre_de_Usuario << " -> " << Mensaje_de_Acceso << "\n";
-        archivo_txt.close(); 
+    if(archivo.is_open()){  //Verifico que se abrio bien el archivo
+        archivo << "[SECURITY] Acceso de usuario: " << Nombre_de_Usuario << " -> " << Mensaje_de_Acceso << "\n";
+        archivo.close(); 
     }
     else{
         cout << "Hubo un error al intentar abrir el archivo." << endl;
     }  
+}
+
+int logMensaje(string Mensaje_de_Runtime_Error, bool Es_Runtime_Error){
+    //Creo y/o abro mi archivo de texto en el que llego registro de los eventos. Uso ios::app para no sobreescribir mi archivo.
+    ofstream archivo("sistema_log.txt", ios::app);   
+
+    if(Es_Runtime_Error){
+        if(archivo.is_open()){  //Verifico que se abrio bien el archivo
+            archivo << "[RUNTIME_ERROR] < " << Mensaje_de_Runtime_Error << " >\n";
+            archivo.close(); 
+            exit(1);  //Lo uso para detener la ejecucion del programa y salir de el con un codigo de error
+        }
+        else{
+            cout << "Hubo un error al intentar abrir el archivo." << endl;
+            exit(1);
+        }
+    }
+
+    return 0;
 }
