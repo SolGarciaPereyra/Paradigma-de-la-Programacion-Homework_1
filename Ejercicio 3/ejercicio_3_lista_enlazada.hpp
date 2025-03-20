@@ -19,7 +19,7 @@ struct lista {  //Defino la estructura de mi lista.
 lista create_list();
 
 /*
-    Devuelve un nodo.
+    Devuelve un puntero a un nodo.
 */
 shared_ptr<nodo> create_node();
 
