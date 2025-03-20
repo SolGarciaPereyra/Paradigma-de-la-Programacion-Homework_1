@@ -2,3 +2,8 @@ Nos paramos sobre la carpeta "Ejercicio 3".
 Seleccionamos la opcion "New Terminal at Folder"
 Escribimos en la terminal: clang++ -g -o ejercicio_3_ main_ejercicio_3_lista_enlazada.cpp ejercicio_3_lista_enlazada.cpp
 Luego escribimos: ./ejercicio_3_
+
+Aclaración: tenia la intencion de usar Valgrind a la hora de mandar a correr mis archivos, ya que los profesores lo recomendaron para
+asegurarnos de que no hayan perdidas de memoria, pero debido a que tengo una macOS y un chip en especifico, la terminal no me deja 
+usarlo. En la materia que curse el semestre pasado (Algoritmos), lograba usar Valgrind porque corria mis programas con Docker. Pero,
+a partir de una nueva actualizacion de macOS, el sistema me bloquea la app ya que detecta un "malware". 
