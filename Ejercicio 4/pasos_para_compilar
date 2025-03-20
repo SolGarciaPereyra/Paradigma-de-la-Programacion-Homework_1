@@ -1,0 +1,4 @@
+Nos paramos sobre la carpeta "Ejercicio 3".
+Seleccionamos la opcion "New Terminal at Folder"
+Escribimos en la terminal: clang++ -g -o ejercicio_4_ main_ejercicio_4_comparando_variables.cpp main_ejercicio_4_comparando_variables.cpp
+Luego escribimos: ./ejercicio_4_
